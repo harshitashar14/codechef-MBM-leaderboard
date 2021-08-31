@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <div>
+
+
+        <div class="row">
+            <div class="name">Name</div><div class="score">Score</div>
+            <div class="rank">Rank</div><div class="division">Division</div>
+            <!-- <h1>hello</h1> -->
+        </div>
+        <%var count=0; %>
+        <% data.forEach(function(item){ %>
+          <% count=count+1; %>
+          <div id="container">
+              <div class="row">
+
+                  <div class="name"><%=item.username%></div><div class="score"><%=item.L_Score%></div>
+                  <div class="rank"><%=item.L_rank%></div><div class="division"><%= count %></div>
+                  <!-- <h1>hello</h1> -->
+              </div>
+        </div>
+<% }); %>
+</div>
+  </body>
+</html>

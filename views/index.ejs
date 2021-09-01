@@ -10,8 +10,9 @@
 
 
         <div class="row">
+            <div class="division">S.NO.</div>
             <div class="name">Name</div><div class="score">Score</div>
-            <div class="rank">Rank</div><div class="division">Division</div>
+            <div class="rank">Rank</div>
             <!-- <h1>hello</h1> -->
         </div>
         <%var count=0; %>
@@ -19,9 +20,9 @@
           <% count=count+1; %>
           <div id="container">
               <div class="row">
-
+                  <div class="division"><%= count %></div>
                   <div class="name"><%=item.username%></div><div class="score"><%=item.L_Score%></div>
-                  <div class="rank"><%=item.L_rank%></div><div class="division"><%= count %></div>
+                  <div class="rank"><%=item.L_rank%></div>
                   <!-- <h1>hello</h1> -->
               </div>
         </div>

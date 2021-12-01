@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="/css/styles.css">
-  </head>
-  <body>
-    <div>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <div>
 
 
-        <div class="row">
-            <div class="division">S.NO.</div>
-            <div class="name">Name</div><div class="score">Score</div>
-            <div class="rank">Rank</div>
-            <!-- <h1>hello</h1> -->
-        </div>
-        <%var count=0; %>
-        <% data.forEach(function(item){ %>
-          <% count=count+1; %>
-          <div id="container">
-              <div class="row">
-                  <div class="division"><%= count %></div>
-                  <div class="name"><%=item.username%></div><div class="score"><%=item.L_Score%></div>
-                  <div class="rank"><%=item.L_rank%></div>
-                  <!-- <h1>hello</h1> -->
-              </div>
-        </div>
-<% }); %>
-</div>
-  </body>
+    <div class="row">
+      <div class="sno">S.NO.</div>
+      <div class="name">Name</div>
+      <div class="score">Score</div>
+      <div class="rank">Rank</div>
+      <div class="division">division</div>
+      <!-- <h1>hello</h1> -->
+    </div>
+    <% var item; %>
+    <% for(var i=1;i<=data.length ;i++) {%>
+    <% item= data[i-1]; %>
+    <div id="container">
+      <div class="row">
+        <div class="sno"><%= i %></div>
+        <div class="name"><%=item.username%></div>
+        <div class="score"><%=item.L_Score%></div>
+        <div class="rank"><%=item.L_rank%></div>
+        <div class="division"><%= item.division %></div>
+        <!-- <h1>hello</h1> -->
+      </div>
+    </div>
+    <% } %>
+
+
+  </div>
+  <% for(var i=1;i<=paras.pages;i++){%>
+
+  <a  href="\?page=<%=paras.page%>&limit=<%=paras.limit%>"> <div class="pages"> <%=i%> </div> </a>
+  <% }%>
+</body>
+
 </html>
